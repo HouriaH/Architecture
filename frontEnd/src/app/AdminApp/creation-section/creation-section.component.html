@@ -1,0 +1,30 @@
+<div id="creationSection">
+    <form id="sectionForm" #sectionForm="ngForm" (ngSubmit)="onSubmitSection(sectionForm)">
+      <div>
+        <input [(ngModel)]="sectionData.titleSection" name="title" type="text" placeholder="titre de la section" id="titleSection"
+          required #titleSection="ngModel">
+        <img src="./assets/text.svg" class="inputIcon" />
+        <img *ngIf="titleSection.errors && (titleSection.value || titleSection.dirty)" src="./assets/cross.svg" class="formIcon" />
+        <img *ngIf="!titleSection.errors" src="./assets/check.svg" class="formIcon" />
+      </div>
+      <div>
+        <input [(ngModel)]="sectionData.descSection" id="descSection" name="desc" type="text" placeholder="description de la section"
+          required #descSection="ngModel">
+        <img src="./assets/text.svg" class="inputIcon" />
+        <img *ngIf="descSection.errors && (descSection.value || descSection.dirty)" src="./assets/cross.svg" class="formIcon" />
+        <img *ngIf="!descSection.errors" src="./assets/check.svg" class="formIcon" />
+      </div>
+      <div>
+        <input [(ngModel)]="sectionData.urlSection" id="urlSection" name="desc" type="text" placeholder="url de la section (ex: general)"
+          required #urlSection="ngModel">
+        <img src="./assets/text.svg" class="inputIcon" />
+        <img *ngIf="urlSection.errors && (urlSection.value || urlSection.dirty)" src="./assets/cross.svg" class="formIcon" />
+        <img *ngIf="!urlSection.errors" src="./assets/check.svg" class="formIcon" />
+      </div>
+      <div>
+        <button type="submit">ENVOYER</button>
+        <span class="errorMsg" *ngIf="error.section">{{error.section}}</span>
+      </div>
+    </form>
+  </div>
+  

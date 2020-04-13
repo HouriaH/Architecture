@@ -1,0 +1,124 @@
+
+
+#header {
+    display:flex;
+    height:35px;
+    background-color: rgba(8, 28, 82, 0.2);
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+    box-shadow: 0 1px 22px rgba(0,0,0,0.3);
+    color:white;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+  #divEntete {
+    width: 80%;
+    margin: 0 auto;
+    margin-top:15px;
+  }
+  #entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 1px 22px rgba(0,0,0,0.3);
+    height: 30px;
+    width: 100%;
+  }
+  
+  #entete p {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    text-shadow: black 3px 2px 5px;
+  }
+  #titleEntete {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 8px;
+    min-width: 517px;
+    max-width: 517px;
+  }
+  
+  #sujetOrParticipant {
+    min-width: 125px;
+    max-width: 125px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #msg {
+    min-width: 90px;
+    max-width: 90px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #lastMsg {
+    min-width: 140px;
+    max-width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 1300px) {
+    #titleEntete {
+      min-width: 230px;
+      max-width: 230px;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    #entete{
+      overflow-x: hidden;
+    }
+  }
+  @media (max-width: 800px) {
+    #titleEntete{
+      min-width: 200px;
+      max-width: 200px;
+      font-size: 15px;
+    }
+  
+    #divEntete {
+      width: 95%;
+    }
+  
+  }
+  @media (max-width: 650px) {
+    #sujetOrParticipant, #msg{
+      display: none;
+    }
+  }
+  @media (max-width: 430px) {
+    #titleEntete{
+      min-width: initial;
+      max-width: initial;
+    }
+    #lastMsg {
+      display:none;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    #titlePage {
+      margin-top: 50px !important;
+    }
+  }
+  
+  #titlePage {
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.7px;
+    margin-top: 25px;
+    text-shadow: black 3px 2px 5px;
+    text-transform: uppercase;
+  }

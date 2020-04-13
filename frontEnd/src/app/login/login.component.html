@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="wrap">
+        <div id="imageDiv" class="wrapDiv">
+            <img src="assets/img-01.png" alt="img" id="img">
+        </div>
+        <form #connexionForm="ngForm" *ngIf="connexion" class="wrapDiv" (ngSubmit)="onSubmitConnexion(connexionForm)">
+            <p class="titleForm">Connexion</p>
+            <input [(ngModel)]="user.mail" required class="input" type="text" name="email" placeholder="Email">
+            <input [(ngModel)]="user.motdepasse" required class="input" type="text" name="password" type="password"
+                placeholder="Mot de passe">
+            <input class="loginButn" type="submit" value="Se connecter">
+            <p class="changeTexte" (click)="changePanel()">Créer un compte →</p>
+        </form>
+        <form #inscriptionForm="ngForm" *ngIf="!connexion" class="wrapDiv"
+            (ngSubmit)="onSubmitInscription(inscriptionForm)">
+            <p class="titleForm">Inscription</p>
+            <input [(ngModel)]="user.nom" required class="input" type="text" name="nom" placeholder="Nom">
+            <input [(ngModel)]="user.mail" required class="input" type="text" name="email" placeholder="Email">
+            <input [(ngModel)]="user.motdepasse" required class="input" type="text" name="password" type="password"
+                placeholder="Mot de passe">
+            <label for="role">Rôle:</label>
+            <select id="role" [(ngModel)]="user.role" name="role" required>
+                <option value="utilisateur">Utilisateur</option>
+                <option value="moderateur">Modérateur</option>
+                <option value="admin">Admin</option>
+            </select>
+            <input class="loginButn" type="submit" value="S'inscrire">
+            <p class="changeTexte" (click)="changePanel()">Se connecter →</p>
+        </form>
+    </div>
+</div>

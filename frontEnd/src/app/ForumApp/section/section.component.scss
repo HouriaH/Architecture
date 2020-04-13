@@ -1,0 +1,255 @@
+
+#header {
+    display:flex;
+    height:35px;
+    background-color: rgba(8, 28, 82, 0.2);
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+    box-shadow: 0 1px 22px rgba(0,0,0,0.3);
+    color:white;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+  #divEntete {
+    width: 80%;
+    margin: 0 auto;
+    margin-top:15px;
+  }
+  
+  #entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(255, 0, 0, 0.1);
+    box-shadow:0 1px 22px rgba(0,0,0,0.3);
+    height:30px;
+    letter-spacing:0.6px;
+    text-shadow: black 3px 2px 5px;
+    width: 100%;
+  }
+  
+  #sujetOrParticipant {
+    min-width: 125px;
+    max-width: 125px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #msg {
+    min-width: 90px;
+    max-width: 90px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #lastMsg {
+    margin-right: 8px;
+    min-width: 140px;
+    max-width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #titleEntete {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 8px;
+    min-width: 517px;
+    max-width: 517px;
+  }
+  
+  #createTopic {
+    background-color: rgba(255, 0, 0, 0.1);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+    padding: 5px;
+  }
+  
+  #titleEnteteTopic {
+    margin-bottom: 15px;
+  }
+  #titleTopic {
+    max-width: 350px;
+    height: 25px;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  #titleTopic input {
+    width: 90%;
+    height: calc(100% - 2px);
+    background-color: rgba(255,255,255,0);
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid white;
+    border-right: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .inputIcon {
+    height: 20px;
+    width: auto;
+    filter: invert(100%);
+    margin-left: 8px;
+  }
+  
+  #divBtnCreateTopic {
+    margin-top: 15px;
+    text-align:right;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  #btnCreateTopic {
+    color: #fff;
+    box-shadow: 0px 0px 3px 1px black;
+    background-color: rgba(0,0,0,0.7);
+    text-shadow: black 3px 2px 5px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    outline:none;
+    transition: all 0.35s ease-in;
+  }
+  
+  .epingler {
+    font-style: italic;
+  }
+  .cbEpingler {
+    margin-right: 5px;
+    margin-left: 7px;
+  }
+  #divEpingler {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  ::ng-deep .ngx-pagination {
+    display: flex;
+    width: 100%;
+    margin-left: 16px;
+    justify-content: flex-end;
+  }
+  ::ng-deep  .ngx-pagination li {
+    background-color:rgba(8, 28, 82, 0.4);
+    box-shadow: 0 1px 22px rgba(0,0,0,0.3);
+    width:30px;
+    height:30px;
+    margin-left: 3px;
+    border-radius: 45px;
+  }
+  
+  ::ng-deep  .ngx-pagination a:hover,
+  ::ng-deep  .ngx-pagination button:hover {
+    background: transparent;
+  }
+  ::ng-deep  .ngx-pagination .disabled {
+    display: none;
+  }
+  ::ng-deep  .ngx-pagination .current,
+  ::ng-deep  .ngx-pagination a {
+    padding: 0;
+  }
+  ::ng-deep  .ngx-pagination ::ng-deep-next a::after
+  {
+    margin-left: 0 !important;
+  }
+  ::ng-deep  .ngx-pagination ::ng-deep-previous a::before
+  {
+    margin-right: 0 !important;
+  }
+  ::ng-deep  .ngx-pagination li span:nth-child(2),
+  ::ng-deep  .ngx-pagination a,
+  ::ng-deep  .ngx-pagination li a span:nth-child(2){
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  @media (max-width: 1300px) {
+    #titleEntete {
+      min-width: 230px;
+      max-width: 230px;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    #entete{
+      overflow-x: hidden;
+    }
+    #createTopic {
+      overflow-x: hidden;
+    }
+  }
+  @media (max-width: 800px) {
+    #titleEntete{
+      min-width: 200px;
+      max-width: 200px;
+      font-size: 15px;
+    }
+  
+    #divEntete {
+      width: 95%;
+    }
+  
+    ::ng-deep  .ngx-pagination {
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 650px) {
+    #sujetOrParticipant, #msg{
+      display: none;
+    }
+  }
+  @media (max-width: 430px) {
+    #entete {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    #titleEntete{
+      min-width: initial;
+      max-width: initial;
+    }
+    #lastMsg {
+      display:none;
+    }
+  }
+  
+  
+  @media (max-width: 1200px) {
+    #titlePage {
+      margin-top: 50px !important;
+    }
+  }
+  
+  #titlePage {
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.7px;
+    margin-top: 25px;
+    text-shadow: black 3px 2px 5px;
+    text-transform: uppercase;
+  }

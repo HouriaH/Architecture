@@ -1,0 +1,12 @@
+<div id="messageDiv">
+    <div id="participantDiv">
+      <p id="participantAlias">{{_messageData.user.nom}}</p>
+    </div>
+    <div id="contentData">
+      <div *ngIf="this._messageData.date" class="messageDate">{{this._messageData.date | date:'MMMM d, y' | uppercase}} À
+        {{this._messageData.date | date:'HH:mm' | uppercase}}</div>
+      <div class="tinyMCEContent" [innerHTML]="content | safeHtml" #tinyContent>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,22 @@
+<div id="topic">
+    <div id="sujet">
+      <div id="title">
+        <img class="pin" #pinTopic>
+        <h2 id="titleTopic" (click)="topicRedirect()">{{_topicData.titleTopic}}</h2>
+      </div>
+      <div id="authorTopicDiv">
+        <p id="authorTopic">
+          Démarré par: {{_topicData.creator.nom}}
+        </p>
+      </div>
+    </div>
+    <p id="participant">{{_topicData.nbParticipant}}</p>
+    <p id="messages">{{_topicData.nbMessage}}</p>
+    <div id="lastParticipant">
+      <p id="lastMsgDate">{{lastUpdateDateParsed}}</p>
+      <div id="lastParticipantDiv">
+        <p id="lastParticipantAlias">{{_topicData.lastUser.nom}}</p>
+      </div>
+    </div>
+  </div>
+  

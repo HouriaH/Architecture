@@ -1,0 +1,21 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Cette API est le BackEnd de notre WebProject Forum",
+    "version": "1.0.0",
+    "title": "Swagger Forum",
+    "contact": {
+      "email": "houria.halouane@u-psud.fr"
+    }
+  },
+  "tags": [
+    {
+      "name": "forumAPI",
+      "description": "Tout à propos des actions possible dans le forum"
+    },
+    {
+      "name": "userAPI",
+      "description": "Tout à propos des utilisateurs"
+    }
+  ]
+}

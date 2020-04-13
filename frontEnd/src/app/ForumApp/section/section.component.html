@@ -1,0 +1,45 @@
+<ng-container *ngIf="loaded">
+    <h1 id="titlePage">{{urlSectionToShow}}</h1>
+    <div id="divEntete">
+      <div id="entete">
+        <p id="titleEntete">SUJET</p>
+        <p id="sujetOrParticipant">PARTICIPANTS</p>
+        <p id="msg">MESSAGES</p>
+        <p id="lastMsg">DERNIER MESSAGE</p>
+      </div>
+      <ng-container *ngFor="let topic of listTopicGlobal">
+        <app-topic-template [topicData]="topic"></app-topic-template>
+      </ng-container>
+      <ng-container *ngFor="let topic of listTopicPin">
+        <app-topic-template [topicData]="topic"></app-topic-template>
+      </ng-container>
+      <ng-container *ngFor="let topic of listTopicSection | paginate: { itemsPerPage: 15, currentPage: p }">
+        <app-topic-template [topicData]="topic"></app-topic-template>
+      </ng-container>
+      <pagination-controls class="pagination" (pageChange)="p = $event" maxSize="5" directionLinks="true" autoHide="true"
+        responsive="false" previousLabel="" nextLabel="" screenReaderPaginationLabel="Pagination"
+        screenReaderPageLabel="page" screenReaderCurrentLabel="current page">
+      </pagination-controls>
+    </div>
+    <div id="createTopic">
+      <p id="titleEnteteTopic">CRÉER UN NOUVEAU SUJET</p>
+      <div id="titleTopic">
+        <input [(ngModel)]="titleTopic" id="titleTopicInput" #titleTopicInput="ngModel" name="desc" type="text"
+          placeholder="Saisir le titre du sujet">
+        <img src="./assets/text.svg" class="inputIcon" />
+  
+      </div>
+      <editor id="textAreaSpin" class="tinyEditor" [init]="tinyMceSettings" [(ngModel)]="text">
+  </editor>
+      <div id="divBtnCreateTopic">
+        <div id="divEpingler" *ngIf="userService.canPinTopic()">
+          <p class="epingler">Épingler à la section</p>
+          <input class="cbEpingler" type="checkbox" name="pinSection" [(ngModel)]="pinSection">
+          <p class="epingler">Épingler au forum</p>
+          <input class="cbEpingler" type="checkbox" name="pinForum" [(ngModel)]="pinForum">
+        </div>
+        <button id="btnCreateTopic" (click)="createTopic()">CRÉER</button>
+      </div>
+    </div>
+  </ng-container>
+  

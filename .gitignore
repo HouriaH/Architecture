@@ -1,0 +1,7 @@
+#BackEnd
+backEnd/node_modules/
+
+#FrontEnd
+frontEnd/dist/
+frontEnd/node_modules/
+frontEnd/temp/

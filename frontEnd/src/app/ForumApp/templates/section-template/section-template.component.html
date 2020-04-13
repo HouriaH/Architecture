@@ -1,0 +1,17 @@
+<div id="section">
+    <div id="sujet">
+      <h2 id="titleSection" (click)="sectionRedirect()">{{_sectionData.titleSection.toString() | uppercase}}</h2>
+      <div id="descDiv">
+        <h3 id="descSection">{{_sectionData.descSection}}</h3>
+      </div>
+    </div>
+    <p id="topics">{{_sectionData.nbTopic}}</p>
+    <p id="messages">{{_sectionData.nbMessage}}</p>
+    <div id="lastParticipant">
+      <p id="lastMsgDate">{{lastMessageDate}}</p>
+      <div id="lastParticipantDiv">
+        <p id="lastParticipantAlias">{{lastnom}}</p>
+      </div>
+    </div>
+  </div>
+  

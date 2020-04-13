@@ -1,0 +1,15 @@
+<a routerLink="/forum/admin-panel" *ngIf="userService.currentUser.role !== 'utilisateur'">
+Panel d'administration
+</a>
+<h1 id="titlePage">Le Forum de la communauté</h1>
+<div id="divEntete">
+    <div id="entete">
+      <p id="titleEntete">SECTION</p>
+      <p id="sujetOrParticipant">SUJETS</p>
+      <p id="msg">MESSAGES</p>
+      <p id="lastMsg">DERNIER MESSAGE</p>
+    </div>
+    <ng-container *ngFor="let section of (sectionList$ | async)">
+      <app-section-template [sectionData]="section"></app-section-template>
+    </ng-container>
+</div>

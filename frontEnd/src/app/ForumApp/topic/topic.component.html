@@ -1,0 +1,20 @@
+<ng-container *ngIf="loaded">
+    <h1 id="topicTitle">{{titleTopic | uppercase}}</h1>
+    <ng-container *ngFor="let message of listMessage | paginate: { itemsPerPage: 20, currentPage: p }">
+      <app-message-template [messageData]="message">
+      </app-message-template>
+    </ng-container>
+    <pagination-controls class="pagination" (pageChange)="p = $event" maxSize="5" directionLinks="true" autoHide="true"
+      responsive="false" previousLabel="" nextLabel="" screenReaderPaginationLabel="Pagination"
+      screenReaderPageLabel="page" screenReaderCurrentLabel="current page">
+    </pagination-controls>
+    <div id="createMessage">
+      <p id="titleEntete">RÉPONDRE</p>
+      <editor id="textAreaSpin" class="tinyEditor" [init]="tinyMceSettings" [(ngModel)]="text">
+    </editor>*
+      <div id="divBtnCreateTopic">
+        <button (click)="createMessage()">POSTER</button>
+      </div>
+    </div>
+  </ng-container>
+  

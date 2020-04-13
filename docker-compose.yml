@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  angular:
+    container_name: front
+    build: ./frontEnd/
+    ports:
+      - 4200:4200
+    networks:
+      - aos
+  nodejs:
+    container_name: back
+    build: ./backEnd/
+    ports:
+      - 3000:3000
+    networks:
+      - aos
+
+networks:
+    aos:

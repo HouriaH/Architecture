@@ -1,0 +1,129 @@
+.tinyMCEContent {
+    text-align: left;
+    color: black;
+    min-height:inherit;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0px 22px rgba(0,0,0,0.7);
+    padding: 12px;
+    max-width: calc(100% - 50px);
+    min-width: calc(100% - 50px);
+  }
+  
+  #contentData {
+    min-height: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 145px);
+    min-width: calc(100% - 145px);
+  }
+  .imgClass {
+    box-shadow: 0 0 2px black;
+    border-radius: 4px;
+  }
+  #messageDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+  }
+  #losange {
+    transform: rotate(45deg);
+    width: 14px;
+    height: 14px;
+    background-color: #206292;
+    position: relative;
+    left: -19px;
+    top: 0;
+    bottom: 0;
+  }
+  .messageDate {
+    font-weight: bold;
+    letter-spacing:0.6px;
+    text-shadow: black 3px 2px 5px;
+    margin-bottom: 5px;
+  }
+  #participantDiv {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 145px;
+    max-width: 145px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  .participantImg {
+    width:60px;
+    height:60px;
+    border-radius: 50px;
+    box-shadow:0 1px 22px rgba(0,0,0,0.3);
+  }
+  
+  #participantAlias {
+    margin-top: 10px;
+  }
+  
+  #participantTag {
+    margin-top: 5px;
+  }
+  
+  @media (max-width: 1300px) {
+    .messageDate {
+      font-size: 15px;
+    }
+  }
+  
+  #participantDiv {
+    margin-top: 0 !important;
+  }
+  #createMessage {
+    width: 95%;
+  }
+  #messageDiv{
+    min-width: 90%;
+    max-width: 90%;
+    flex-direction: column;
+  }
+  .messageDate {
+    text-align: right;
+    min-width: 50%;
+    margin: auto;
+    margin-right: 0;
+    font-size: 13px;
+  }
+  #participantDiv {
+    max-width: 100%;
+    min-width: 100%;
+    align-items: flex-start;
+    position: relative;
+    top: 13px;
+  }
+  #participantTag{
+    max-width: 45%;
+    min-width: 45%;
+  }
+  #contentData {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+  }
+  .tinyMCEContent {
+    max-width: calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  #losange {
+    width: 7px;
+    height: 7px;
+    left: -3.5px;
+    top: -1px;
+  }
+  

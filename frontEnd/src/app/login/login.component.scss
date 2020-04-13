@@ -1,0 +1,138 @@
+.wrap{
+    width: 100%;
+    max-width: 65%;
+    height: 85%;
+    max-height:678px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#checkBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.wrapDiv {
+    position: relative;
+}
+
+#imageDiv {
+  height: 100%;
+}
+#imageDiv img {
+    max-height: 300px;
+    height: 80%;
+    width: auto;
+}
+
+.wrapDiv .input {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding-left: 30px;
+    border: none;
+    margin-top: 20px;
+}
+
+.titleForm{
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 40px;
+    font-weight: bold;
+}
+
+.changeTexte {
+    position: absolute;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+.wrapDiv {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginButn{
+    margin-top: 30px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    width: 60%;
+    max-width: 280px;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.wrapDiv {
+    flex-direction: column;
+}
+@media (max-width:1000px) {
+    .wrap {
+        margin: 10px;
+        height: initial;
+        flex-direction: column;
+        max-width: initial;
+        .wrapDiv {
+            width: 100%;
+            padding-bottom: 30px;
+        }
+        #imageDiv img {
+            max-height: 200px;
+        }
+        .wrapDiv p {
+            padding-bottom: 0;
+        }
+        .wrapDiv input[type=text], .wrapDiv input[type=password] {
+            width: 60%;
+            height: 40px;
+        }
+        .loginButn {
+            width: 70%;
+            height: 40px;
+        }
+        .changeTexte {
+            bottom: 5px;
+        }
+    }
+
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+select {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 30px;
+    margin-bottom: -15px;
+}
