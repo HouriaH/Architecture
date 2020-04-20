@@ -49,7 +49,7 @@ export class ForumController {
             req.body.idTopic += `-${countTopicName}`;
             const newTopic = new Topic(req.body);
             const newTopicResult: ITopicModel = await newTopic.save();
-            if (newTopicResult._id) { // si l'id existe
+            if (newTopicResult.idTopic) { // si l'id existe
                 if (await ForumController.updateSectionOnTopicCreation(newTopicResult.urlSection, newTopicResult.creator, newTopicResult.lastUpdateDate)) {
                     const idTopic = JSON.stringify(newTopicResult.idTopic)
                     res.status(200).send(idTopic);
@@ -117,7 +117,7 @@ export class ForumController {
                 incNbParticipant = 0;
             }
             const topicUpdateResult =
-                await Topic.updateOne({ _id: req.body.idTopic },
+                await Topic.updateOne({ idTopic: req.body.idTopic },
                     {
                         $push:
                         {

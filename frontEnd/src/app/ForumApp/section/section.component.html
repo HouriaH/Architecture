@@ -13,7 +13,7 @@
       <ng-container *ngFor="let topic of listTopicPin">
         <app-topic-template [topicData]="topic"></app-topic-template>
       </ng-container>
-      <ng-container *ngFor="let topic of listTopicSection | paginate: { itemsPerPage: 15, currentPage: p }">
+      <ng-container *ngFor="let topic of listTopicSection | paginate: { itemsPerPage: 5, currentPage: p }">
         <app-topic-template [topicData]="topic"></app-topic-template>
       </ng-container>
       <pagination-controls class="pagination" (pageChange)="p = $event" maxSize="5" directionLinks="true" autoHide="true"

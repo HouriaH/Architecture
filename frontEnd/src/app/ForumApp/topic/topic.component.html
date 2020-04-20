@@ -1,6 +1,6 @@
 <ng-container *ngIf="loaded">
     <h1 id="topicTitle">{{titleTopic | uppercase}}</h1>
-    <ng-container *ngFor="let message of listMessage | paginate: { itemsPerPage: 20, currentPage: p }">
+    <ng-container *ngFor="let message of listMessage | paginate: { itemsPerPage: 5, currentPage: p }">
       <app-message-template [messageData]="message">
       </app-message-template>
     </ng-container>
