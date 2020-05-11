@@ -23,7 +23,7 @@
     "date-fns": "^2.12.0",
     "ngx-pagination": "^5.0.0",
     "rxjs": "~6.5.4",
-    "tinymce": "^5.2.1",
+    "tinymce": "^5.2.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
